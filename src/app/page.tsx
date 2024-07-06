@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis'
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Services from '@/components/Services';
 
 export default function Home() {
   useEffect(() => {
@@ -24,9 +25,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between overflow-x-hidden'>
+    <main className='flex relative min-h-screen flex-col items-center justify-between overflow-x-hidden'>
       <Hero />
       <About />
+      <Services />
     </main>
   );
 }
