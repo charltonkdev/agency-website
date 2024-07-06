@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.108.1",
+    "@react-three/fiber": "^8.16.8",
+    "@splinetool/loader": "^1.8.9",
+    "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.8.9",
     "@studio-freight/lenis": "^1.0.42",
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.13",
     "gsap": "^3.12.5",
@@ -23,7 +31,8 @@
     "react-feather": "^2.0.10",
     "sass": "^1.77.6",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.136.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",

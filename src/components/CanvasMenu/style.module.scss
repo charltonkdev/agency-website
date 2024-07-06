@@ -1,16 +1,16 @@
-.header{
-    position: fixed;
-    right: 50px;
-    top: 50px;
-    z-index: 99;
-    .menu{
-        width: 480px;
-        height: 650px;
-        background-color:#D35A0A;
-        border-radius: 25px;
-        position: relative;
-        a{
-            color: #000;
-        }
+.header {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 99;
+  .menu {
+    width: 480px;
+    height: 650px;
+    background-color: #fff;
+    border-radius: 25px;
+    position: relative;
+    a {
+      color: #000;
     }
+  }
 }

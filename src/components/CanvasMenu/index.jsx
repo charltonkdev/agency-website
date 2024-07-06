@@ -7,7 +7,7 @@ import Nav from './Nav';
 
 const menu = {
     open: {
-        width: "480px",
+        width: "430px",
         height: "650px",
         top: "-25px",
         right: "-25px",
