@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
-import { Button } from "./MovingBorders";
+import { Button } from "./MovingBorder";
 
 type Card = {
   id: number;
