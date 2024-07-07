@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -140,7 +141,7 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
           {id === 1 && 
-          <div className="absolute top-12">
+          <div className="absolute top-52 md:top-12">
             <WebsiteMockup />
             </div>
           }

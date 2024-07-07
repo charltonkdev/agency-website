@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 const Header = () => {
   return (
     <header className='w-full flex items-center relative justify-between'>
