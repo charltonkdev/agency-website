@@ -45,7 +45,7 @@ const Hero = () => {
                 <span>Get Started</span>
             </motion.button>
             <motion.div
-                className="w-full h-full absolute bottom-0"
+                className="w-full h-full absolute bottom-0 z-50"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.35 }}>

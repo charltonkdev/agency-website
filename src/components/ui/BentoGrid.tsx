@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
 
 import { cn } from "@/utils/cn";
 
-
-import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
-import MagicButton from "./MagicButton";
+import WebsiteMockup from "./WebsiteMockup";
+import VortexBg from "./VortexBg";
 
 export const BentoGrid = ({
   className,
@@ -83,7 +82,7 @@ export const BentoGridItem = ({
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
+        background: "rgba(0,0,0, 0.8)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
@@ -113,10 +112,7 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 7 && (
-          // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl" />
-          </BackgroundGradientAnimation>
+         <VortexBg />
         )}
 
         <div
@@ -125,7 +121,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          
+
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
@@ -138,11 +134,16 @@ export const BentoGridItem = ({
             descriptionClassName,
             "font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10 mt-3"
           )}
-            >
+          >
             {description}
           </div>
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
+          {id === 1 && 
+          <div className="absolute top-12">
+            <WebsiteMockup />
+            </div>
+          }
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -188,13 +189,15 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
+              <motion.button
+                type="button"
+                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+            >
+                <span>Let&apos;s Talk</span>
+            </motion.button>
             </div>
           )}
         </div>
