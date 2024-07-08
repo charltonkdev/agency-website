@@ -1,9 +1,6 @@
 'use client'
 import { useState } from "react";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
-
 import { cn } from "@/utils/cn";
 
 import GridGlobe from "./GridGlobe";
@@ -11,6 +8,7 @@ import animationData from "@/data/confetti.json";
 import WebsiteMockup from "./WebsiteMockup";
 import VortexBg from "./VortexBg";
 import Soda from "../SodaAnimation/Soda"
+import ProgLangList from "./ProgLangList";
 
 export const BentoGrid = ({
   className,
@@ -141,7 +139,7 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
           {id === 1 && 
-          <div className="absolute top-52 md:top-12">
+          <div className="absolute top-52 md:top-12 z-0">
             <WebsiteMockup />
             </div>
           }
@@ -150,31 +148,7 @@ export const BentoGridItem = ({
           {/* Tech stack list div */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              {/* tech stack lists */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
-              </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <ProgLangList />
             </div>
           )}
           {id === 7 && (
@@ -187,8 +161,6 @@ export const BentoGridItem = ({
                 className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
                   }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               <button

@@ -18,27 +18,27 @@ export default function WebsiteMockup() {
 const testimonials = [
   {
     name: "Works01",
-    title: "works01",
+    title: "",
     img: "/works/works01.png",
   },
   {
     name: "Works02",
-    title: "works02",
+    title: "",
     img: "/works/works02.png",
   },
   {
     name: "Works03",
-    title: "works03",
+    title: "",
     img: "/works/works03.png",
   },
   {
     name: "Works04",
-    title: "works04",
+    title: "",
     img: "/works/works04.png",
   },
   {
     name: "Works05",
-    title: "works05",
+    title: "",
     img: "/works/works05.png",
   },
 ];

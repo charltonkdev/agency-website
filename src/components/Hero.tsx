@@ -4,12 +4,14 @@ import dynamic from 'next/dynamic';
 import SparklesBg from "./ui/SparklesBg";
 import { Spotlight } from "./ui/Spotlight";
 import HeroContent from "./ui/HeroContent";
+import { BackgroundBeams } from "./ui/BackgroundBeam";
 
 const LostOrb = dynamic(() => import('./ui/LostOrb'), { ssr: false });
 
 export default function Hero() {
     return (
-        <div className="flex flex-col h-screen w-full bg-grid-white/[0.05] relative items-center justify-center">
+        <div className="flex flex-col h-screen w-full relative items-center justify-center bg-black">
+            <BackgroundBeams />
             {/* Radial gradient for the container to give a faded look */}
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"

@@ -123,12 +123,23 @@ html.lenis, html.lenis body {
 
 @media screen and (max-width: 1023px) {
   .soda {
-    width: 400px;
+    width: 250px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .soda {
-    width: 250px;
+    width: 150px;
+  }
+  .product {
+    bottom: -300px;
+  }
+
+  .brandContainer:hover .product {
+    bottom: -150px;
+  }
+
+  .brandContainer:hover .product .soda:nth-child(2) {
+    --left: 300px;
   }
 }
