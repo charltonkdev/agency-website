@@ -396,7 +396,7 @@ const GridGlobe = () => {
   return (
     // remove dark:bg-black bg-white h-screen md:h-auto  w-full flex-row py-20
     // change absolute -left-5 top-36, add w-full h-full md:top-40
-    <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full z-0">
+    <div className="flex items-center justify-center absolute -left-5 top-52 md:top-40 w-full h-full z-0">
       {/* remove h-full md:h-[40rem] */}
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
         {/* remove these text divs */}

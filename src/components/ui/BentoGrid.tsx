@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
@@ -11,6 +10,7 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import WebsiteMockup from "./WebsiteMockup";
 import VortexBg from "./VortexBg";
+import Soda from "../SodaAnimation/Soda"
 
 export const BentoGrid = ({
   className,
@@ -77,7 +77,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 brandContainer",
         className
       )}
       style={{
@@ -145,6 +145,7 @@ export const BentoGridItem = ({
             <WebsiteMockup />
             </div>
           }
+          {id === 5 && <Soda />}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -190,15 +191,11 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <motion.button
+              <button
                 type="button"
-                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
-            >
+                className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn" >
                 <span>Let&apos;s Talk</span>
-            </motion.button>
+            </button>
             </div>
           )}
         </div>

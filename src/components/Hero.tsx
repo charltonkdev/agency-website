@@ -5,8 +5,7 @@ import SparklesBg from "./ui/SparklesBg";
 import { Spotlight } from "./ui/Spotlight";
 import HeroContent from "./ui/HeroContent";
 
-// Dynamically import LostOrb without SSR
-const LostOrb = dynamic(() => import('./LostOrb'), { ssr: false });
+const LostOrb = dynamic(() => import('./ui/LostOrb'), { ssr: false });
 
 export default function Hero() {
     return (
