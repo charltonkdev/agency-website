@@ -1,7 +1,6 @@
 
 import React from "react";
 import dynamic from 'next/dynamic';
-import SparklesBg from "./ui/SparklesBg";
 import { Spotlight } from "./ui/Spotlight";
 import HeroContent from "./ui/HeroContent";
 import { BackgroundBeams } from "./ui/BackgroundBeam";
@@ -21,7 +20,7 @@ export default function Hero() {
                 className="-top-40 left-20 md:left-80 md:-top-20"
                 fill="blue"
             />
-            <SparklesBg />
+            
             <HeroContent />
             <div className="w-full h-full absolute bottom-0">
                 <LostOrb />
