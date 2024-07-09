@@ -78,3 +78,42 @@ export const gridItems = [
         spareImg: "",
     },
 ];
+
+export const workItems = [
+    {
+        id: 1,
+        title: "Project 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
+        className: "lg:col-span-5 md:col-span-5 md:row-span-1",
+        imgClassName: "",
+        titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+        img: "/works/works01.png",
+        category: "E-commerce",
+        tag: "Online Shopping, Business",
+        link: "",
+    },
+    {
+        id: 2,
+        title: "Project 2",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
+        className: "lg:col-span-5 md:col-span-5 md:row-span-1",
+        imgClassName: "",
+        titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+        img: "/works/works02.png",
+        category: "Event",
+        tag: "Ticketing",
+        link: "",
+    },
+    {
+        id: 3,
+        title: "Project 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare luctus arcu, nec ultricies libero consequat nec. Suspendisse id ipsum nibh. Vestibulum.",
+        className: "lg:col-span-5 md:col-span-5 md:row-span-1",
+        imgClassName: "",
+        titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+        img: "/works/works03.png",
+        category: "Property",
+        tag: "Informative, Enquiry",
+        link: "",
+    },
+]
