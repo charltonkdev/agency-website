@@ -1,12 +1,9 @@
 'use client'
 import { useState } from "react";
-
 import { cn } from "@/utils/cn";
-
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import WebsiteMockup from "./WebsiteMockup";
-import VortexBg from "./VortexBg";
 import Soda from "../SodaAnimation/Soda"
 import ProgLangList from "./ProgLangList";
 
@@ -110,9 +107,6 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 7 && (
-         <VortexBg />
-        )}
 
         <div
           className={cn(
@@ -137,10 +131,11 @@ export const BentoGridItem = ({
             {description}
           </div>
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
-          {id === 1 && 
-          <div className="absolute top-52 md:top-12 z-0">
-            <WebsiteMockup />
+          {id === 2 && <GridGlobe />
+          }
+          {id === 1 &&
+            <div className="absolute top-52 md:top-12 z-0">
+              <WebsiteMockup />
             </div>
           }
           {id === 5 && <Soda />}
@@ -167,7 +162,7 @@ export const BentoGridItem = ({
                 type="button"
                 className="text-sm relative z-20 px-4 py-2 bg-white text-black rounded-full text-center creativeBtn" >
                 <span>Let&apos;s Talk</span>
-            </button>
+              </button>
             </div>
           )}
         </div>

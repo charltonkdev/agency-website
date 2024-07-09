@@ -143,3 +143,18 @@ html.lenis, html.lenis body {
     --left: 300px;
   }
 }
+
+@keyframes slideFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.orbStyle {
+  animation: slideFadeInUp 1s ease forwards;
+}

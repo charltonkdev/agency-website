@@ -27,17 +27,20 @@ export default function ProgLangList() {
 
 const leftProg = [
   {
-    name: "Works01",
+    id: 20,
+    name: "prog1",
     title: "Webflow",
     img: "",
   },
   {
-    name: "Works02",
+    id: 21,
+    name: "prog2",
     title: "WordPress",
     img: "",
   },
   {
-    name: "Works03",
+    id: 22,
+    name: "prog3",
     title: "NextJS",
     img: "",
   },
@@ -45,17 +48,20 @@ const leftProg = [
 
 const rightProg = [
     {
-      name: "Works04",
+      id: 23,
+      name: "prog4",
       title: "VueJS",
       img: "",
     },
     {
-      name: "Works05",
+      id: 24,
+      name: "prog5",
       title: "TypeScript",
       img: "",
     },
     {
-      name: "Works05",
+      id: 25,
+      name: "prog6",
       title: "React",
       img: "",
     },

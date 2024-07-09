@@ -1,14 +1,15 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { workItems } from "../data/index";
+import Image from "next/image";
 
 export default function Works() {
     return (
         <section id="works" className="relative flex flex-col w-full h-full bg-black py-20">
             <h3 className="text-xl text-white z-50 container pb-5">
-                Our Services
+                Our Works
             </h3>
             {workItems.map((item) => (
-                <div key={item.id} className="flex justify-evenly container py-20 border-b-2 group">
+                <div key={item.id} className="flex md:flex-row flex-col justify-evenly container py-20 border-b-2 group">
                     <div className="flex flex-col p-6 gap-2 justify-between">
                         <div>
                             <h2 className="text-4xl font-semibold pb-3">{item.title}</h2>
@@ -32,9 +33,9 @@ export default function Works() {
                     </div>
                     <div className="flex flex-col">
                         <div className="w-full h-full overflow-hidden rounded-3xl">
-                            <img src={item.img} alt={item.title} sizes="objectFit" 
-                            width="auto"
-                            height="auto"
+                            <Image src={item.img} alt={item.title} sizes="objectFit" 
+                            width={1000}
+                            height={1000}
                             className="group-hover:scale-105 duration-300"/>
                         </div>
 

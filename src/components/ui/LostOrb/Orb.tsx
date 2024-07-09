@@ -1,7 +1,6 @@
-
 import Spline from '@splinetool/react-spline/next';
 
-export default function LostOrb() {
+export default function Orb() {
   return (
     <div className='w-full h-full'>
       <Spline

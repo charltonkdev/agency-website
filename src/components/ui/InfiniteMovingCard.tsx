@@ -111,7 +111,7 @@ export const InfiniteMovingCards = ({
             key={item.name}
           >
             {item.img && (
-              <Image alt={item.name || "Image"} src={item.img} width={500} height={300} />
+              <Image alt={item.title || "Image"} src={item.img} width={500} height={300} style={{ width: 'auto', height: 'auto' }} priority  />
             )}
             {item.title && (
               <p className="relative w-max px-6 py-2">{item.title}</p>

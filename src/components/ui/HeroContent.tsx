@@ -5,9 +5,9 @@ import { gsap } from "gsap";
 export default function HeroContent() {
     useEffect(() => {
         const tl = gsap.timeline();
-        tl.fromTo(".hero-text-1", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.3 })
-          .fromTo(".hero-text-2", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.5 })
-          .fromTo(".hero-button", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.8 });
+        tl.fromTo(".hero-text-1", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.3, ease: "power1.out", })
+          .fromTo(".hero-text-2", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.3, delay: 0.1, ease: "power1.out", })
+          .fromTo(".hero-button", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.3, delay: 0.15, ease: "power1.out", });
     }, []);
 
     return (
