@@ -7,7 +7,7 @@ export function Footer() {
     const spanItemsRef = useRef([]);
 
     useEffect(() => {
-        const handleMouseEnter = (item: { querySelector: any; addEventListener?: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler?: () => void; __leaveHandler?: () => void; }) => {
+        const handleMouseEnter = (item) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -26,7 +26,7 @@ export function Footer() {
             });
         };
 
-        const handleMouseLeave = (item: { querySelector: any; addEventListener?: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler?: () => void; __leaveHandler?: () => void; }) => {
+        const handleMouseLeave = (item) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -45,7 +45,7 @@ export function Footer() {
             });
         };
 
-        const addEventListeners = (item: { querySelector: (arg0: string) => any; addEventListener: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler: () => void; __leaveHandler: () => void; }) => {
+        const addEventListeners = (item) => {
             const textHover = item.querySelector('.hover');
             gsap.set(textHover, { yPercent: 100, perspective: 1000, rotationX: -90 });
 
@@ -60,7 +60,7 @@ export function Footer() {
             item.__leaveHandler = leaveHandler;
         };
 
-        const removeEventListeners = (item: { removeEventListener: (arg0: string, arg1: any) => void; __enterHandler: any; __leaveHandler: any; }) => {
+        const removeEventListeners = (item) => {
             item.removeEventListener('mouseenter', item.__enterHandler);
             item.removeEventListener('mouseleave', item.__leaveHandler);
         };
@@ -81,7 +81,7 @@ export function Footer() {
                     {['About', 'Services', 'Works', 'Contact'].map((text, index) => (
                         <li
                             key={index}
-                            ref={(el) => (listItemsRef.current[index] = el)}
+                            ref={(el) => { listItemsRef.current[index] = el; }}
                             className="relative overflow-hidden h-5 cursor-pointer"
                         >
                             <span className="block initial absolute top-0 left-0 w-full h-full">{text}</span>
