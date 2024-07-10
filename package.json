@@ -11,8 +11,6 @@
   "dependencies": {
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",
-    "@splinetool/loader": "^1.8.9",
-    "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.8.9",
     "@studio-freight/lenis": "^1.0.42",

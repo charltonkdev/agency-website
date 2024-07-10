@@ -1,9 +1,7 @@
 import React from "react";
-import dynamic from 'next/dynamic';
 import { Spotlight } from "./ui/Spotlight";
 import HeroContent from "./ui/HeroContent";
-
-const LostOrb = dynamic(() => import('./ui/LostOrb'), { ssr: false });
+import LostOrb from "./ui/LostOrb";
 
 export default function Hero() {
     return (
