@@ -3,11 +3,11 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
 export function Footer() {
-    const listItemsRef = useRef([]);
-    const spanItemsRef = useRef([]);
+    const listItemsRef = useRef<(HTMLLIElement | null)[]>([]);
+    const spanItemsRef = useRef<(HTMLSpanElement | null)[]>([]);
 
     useEffect(() => {
-        const handleMouseEnter = (item) => {
+        const handleMouseEnter = (item: HTMLElement) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -26,7 +26,7 @@ export function Footer() {
             });
         };
 
-        const handleMouseLeave = (item) => {
+        const handleMouseLeave = (item: HTMLElement) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -45,7 +45,8 @@ export function Footer() {
             });
         };
 
-        const addEventListeners = (item) => {
+        const addEventListeners = (item: HTMLElement | null) => {
+            if (!item) return;
             const textHover = item.querySelector('.hover');
             gsap.set(textHover, { yPercent: 100, perspective: 1000, rotationX: -90 });
 
@@ -56,13 +57,14 @@ export function Footer() {
             item.addEventListener('mouseleave', leaveHandler);
 
             // Store handlers to remove them later
-            item.__enterHandler = enterHandler;
-            item.__leaveHandler = leaveHandler;
+            (item as any).__enterHandler = enterHandler;
+            (item as any).__leaveHandler = leaveHandler;
         };
 
-        const removeEventListeners = (item) => {
-            item.removeEventListener('mouseenter', item.__enterHandler);
-            item.removeEventListener('mouseleave', item.__leaveHandler);
+        const removeEventListeners = (item: HTMLElement | null) => {
+            if (!item) return;
+            item.removeEventListener('mouseenter', (item as any).__enterHandler);
+            item.removeEventListener('mouseleave', (item as any).__leaveHandler);
         };
 
         listItemsRef.current.forEach(addEventListeners);
@@ -90,9 +92,9 @@ export function Footer() {
                     ))}
                 </ul>
             </div>
-            <div className='w-full relative overflow-hidden group/line py-12'>
-                <h1 className='w-full text-[15vw] uppercase leading-none'>Let&apos;s Talk</h1>
-                <span className='block w-full bg-white h-3 -translate-x-full group-hover/line:translate-x-0 duration-500' />
+            <div className='relative overflow-hidden group/line py-12 mx-auto w-fit cursor-pointer'>
+                <h1 className='w-full text-[12vw] uppercase leading-none'>Let&apos;s Talk</h1>
+                <span className='block w-full bg-white h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100' />
             </div>
             <div className='w-full flex flex-col md:flex-row gap-10 justify-between'>
                 <div className='flex gap-10 uppercase'>
@@ -102,6 +104,14 @@ export function Footer() {
                     </div>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
                         <h1 className='leading-none pb-2'>github</h1>
+                        <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
+                    </div>
+                    <div className=' relative overflow-hidden group/line cursor-pointer'>
+                        <h1 className='leading-none pb-2'>behance</h1>
+                        <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
+                    </div>
+                    <div className=' relative overflow-hidden group/line cursor-pointer'>
+                        <h1 className='leading-none pb-2'>dribble</h1>
                         <span className='block bg-white h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500' />
                     </div>
                     <div className=' relative overflow-hidden group/line cursor-pointer'>
