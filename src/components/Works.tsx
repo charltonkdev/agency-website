@@ -33,12 +33,8 @@ export default function Works() {
                     </div>
                     <div className="flex flex-col flex-grow">
                         <div className="w-full h-full overflow-hidden rounded-3xl">
-                            <img src={item.img} alt={item.title} sizes="objectFit"
-                                width={800}
-                                height={800}
-                                className="group-hover:scale-105 duration-300" />
+                        <Image src={item.img} alt={item.title} layout="responsive" width={800} height={800} className="group-hover:scale-105 duration-300" />
                         </div>
-
                     </div>
                 </div>
             ))}
