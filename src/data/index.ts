@@ -20,7 +20,7 @@ export const gridItems = [
         titleClassName: "justify-start",
         descriptionClassName: "max-w-sm",
         img: "",
-        spareImg: "",
+        spareImg: "/grid.svg",
     },
     {
         id: 3,

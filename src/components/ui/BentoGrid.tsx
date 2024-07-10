@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react";
 import { cn } from "@/utils/cn";
-import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import WebsiteMockup from "./WebsiteMockup";
 import Soda from "../SodaAnimation/Soda"
@@ -131,8 +130,8 @@ export const BentoGridItem = ({
             {description}
           </div>
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />
-          }
+          {/*id === 2 && <GridGlobe />
+          }*/}
           {id === 1 &&
             <div className="absolute top-52 md:top-12 z-0">
               <WebsiteMockup />
