@@ -12,10 +12,6 @@ export const links = [
         href: "/"
     },
     {
-        title: "Portfolio",
-        href: "/"
-    },
-    {
         title: "Contact",
         href: "/"
     }

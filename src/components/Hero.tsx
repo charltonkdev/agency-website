@@ -17,9 +17,7 @@ export default function Hero() {
             />
             
             <HeroContent />
-            <div className="w-full h-full absolute bottom-0">
-                <LostOrb />
-            </div>
+            
         </div>
     );
 }
