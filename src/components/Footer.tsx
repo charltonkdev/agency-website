@@ -7,7 +7,7 @@ export function Footer() {
     const spanItemsRef = useRef([]);
 
     useEffect(() => {
-        const handleMouseEnter = (item) => {
+        const handleMouseEnter = (item: { querySelector: any; addEventListener?: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler?: () => void; __leaveHandler?: () => void; }) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -26,7 +26,7 @@ export function Footer() {
             });
         };
 
-        const handleMouseLeave = (item) => {
+        const handleMouseLeave = (item: { querySelector: any; addEventListener?: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler?: () => void; __leaveHandler?: () => void; }) => {
             const textInitial = item.querySelector('.initial');
             const textHover = item.querySelector('.hover');
             gsap.to(textInitial, {
@@ -45,7 +45,7 @@ export function Footer() {
             });
         };
 
-        const addEventListeners = (item) => {
+        const addEventListeners = (item: { querySelector: (arg0: string) => any; addEventListener: (arg0: string, arg1: { (): void; (): void; }) => void; __enterHandler: () => void; __leaveHandler: () => void; }) => {
             const textHover = item.querySelector('.hover');
             gsap.set(textHover, { yPercent: 100, perspective: 1000, rotationX: -90 });
 
@@ -60,7 +60,7 @@ export function Footer() {
             item.__leaveHandler = leaveHandler;
         };
 
-        const removeEventListeners = (item) => {
+        const removeEventListeners = (item: { removeEventListener: (arg0: string, arg1: any) => void; __enterHandler: any; __leaveHandler: any; }) => {
             item.removeEventListener('mouseenter', item.__enterHandler);
             item.removeEventListener('mouseleave', item.__leaveHandler);
         };
