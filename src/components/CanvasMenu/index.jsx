@@ -4,11 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Button from './Button';
 import styles from './style.module.scss';
 import Nav from './Nav';
+import clsx from 'clsx';
 
 const menu = {
     open: {
-        width: "430px",
-        height: "650px",
+        width: "88vw",
+        height: "75vh",
         top: "-25px",
         right: "-25px",
         transition: { duration: 0.5, type: "tween", ease: [0.76, 0, 0.24, 1] }
@@ -28,7 +29,7 @@ export default function Index() {
     return (
         <div className={styles.header}>
             <motion.div
-                className={styles.menu}
+                className={clsx(styles.menu)}
                 variants={menu}
                 animate={isActive ? "open" : "closed"}
                 initial="closed"
